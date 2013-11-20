@@ -1,0 +1,32 @@
+
+.subR td{
+    border-bottom: 1px solid #59d190;
+}
+.propertyTable thead tr th{
+    text-align: center;
+}
+.ui-dialog{
+    top: 100px !Important;
+    left: 30% !Important;
+}
+
+#property-grid table tr {cursor: pointer;}
+#property-grid table tr:hover{background: #ddd;}
+
+.row-fluid textarea{
+    height: auto !important;
+}
+
+
+#property-form label{
+    float: left;
+    width: 30% !important;
+}
+#property-form input[type=text], input[type=password], textarea{
+
+    width: 70% !important;
+    float: right;
+}
+#property-form .row-fluid{
+    margin: 5px 0;
+}

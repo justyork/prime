@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Data Source" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="d070e40b-0f6d-4467-a0cf-f0d152a372bc">
+    <synchronize>true</synchronize>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc://localhost/prime</jdbc-url>
+    <user-name>root</user-name>
+    <libraries>
+      <library>
+        <url>jar://$PROJECT_DIR$/mysql-connector-java-5.1.26-bin.jar!/</url>
+      </library>
+      <library>
+        <url>file://$PROJECT_DIR$/mysql-connector-license.txt</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>
