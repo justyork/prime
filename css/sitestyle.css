@@ -19,14 +19,15 @@
 
 
 #property-form label{
-    float: left;
-    width: 30% !important;
-}
+float: left;
+width: 30% ;
+    }
 #property-form input[type=text], input[type=password], textarea{
 
-    width: 70% !important;
-    float: right;
-}
-#property-form .row-fluid{
-    margin: 5px 0;
-}
+width: 70% ;
+float: right;
+    }
+#property-form .row-fluid{margin: 5px 0;}
+#property-form .span3 label{width: 60%;}
+#property-form .span3 input[type=text], #property-form .span3 input[type=password], #property-form .span3 textarea{width: 40%;}
+#property-form .span3 .pr{width: 100% !important;}

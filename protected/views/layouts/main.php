@@ -31,32 +31,7 @@ $mainPage = Yii::app()->controller->id == 'site' && Yii::app()->controller->acti
                     <body>
                         <div id="maincontainer" class="clearfix">
 
-                            <div class="patterns" id="body-patterns">
-                                <span class="background" id="pattern1"></span>
-                                <span class="background" id="pattern2"></span>
-                                <span class="background" id="pattern3"></span>
-                                <span class="background" id="pattern4"></span>
-                                <span class="background" id="pattern5"></span>
-                                <a href="#"><span></span></a>
-                            </div>
 
-                            <div class="patterns" id="right-sidebar-bg">
-                                <span class="background" id="pattern1"></span>
-                                <span class="background" id="pattern2"></span>
-                                <span class="background" id="pattern3"></span>
-                                <span class="background" id="pattern4"></span>
-                                <span class="background" id="pattern5"></span>
-                                <a href="#"><span></span></a>
-                            </div>
-
-                            <div class="patterns"  id="main-nav-bg">
-                                <span class="background" id="pattern1"></span>
-                                <span class="background" id="pattern2"></span>
-                                <span class="background" id="pattern3"></span>
-                                <span class="background" id="pattern4"></span>
-                                <span class="background" id="pattern5"></span>
-                                <a href="#"><span></span></a>
-                            </div>
 
                             <!-- ======= Header start ======= -->
                             <div class="screen"></div>

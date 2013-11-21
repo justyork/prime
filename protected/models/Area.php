@@ -122,4 +122,10 @@ class Area extends CActiveRecord
         }
         return $name;
     }
+
+    public static function getList($id){
+        $model = self::model()->findAll('category = ' . $id);
+
+        return CHtml::listData($model, 'id', self::name());
+    }
 }

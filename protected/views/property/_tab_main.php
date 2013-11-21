@@ -39,7 +39,7 @@
     <div class="span6">
 
         <?php echo $form->labelEx($model, 'type'); ?>
-        <?php echo $form->textField($model, 'type', array('size' => 10, 'maxlength' => 10)); ?>
+        <?php echo $form->dropdownList($model, 'type',$db['prtype'], array('empty' => '-- Empty --')); ?>
         <?php echo $form->error($model, 'type'); ?>
     </div>
     <div class="span3">
@@ -50,14 +50,16 @@
     </div>
     <div class="span3">
 
+        <?php echo $form->labelEx($model, 'hsale'); ?>
+        <?php echo $form->checkBox($model, 'hsale'); ?>
+        <?php echo $form->error($model, 'hsale'); ?>
     </div>
 </div>
 <div class="row-fluid">
     <div class="span6">
-
-        <?php echo $form->labelEx($model, 'city'); ?>
-        <?php echo $form->textField($model, 'city', array('size' => 6, 'maxlength' => 6)); ?>
-        <?php echo $form->error($model, 'city'); ?>
+        <?php echo $form->labelEx($model, 'country'); ?>
+        <?php echo $form->dropdownList($model, 'country',$db['country'], array('empty' => '-- Empty --')); ?>
+        <?php echo $form->error($model, 'country'); ?>
     </div>
     <div class="span3">
         <?php echo $form->labelEx($model, 'frent'); ?>
@@ -66,15 +68,18 @@
     </div>
     <div class="span3">
 
+        <?php echo $form->labelEx($model, 'hrent'); ?>
+        <?php echo $form->checkBox($model, 'hrent'); ?>
+        <?php echo $form->error($model, 'hrent'); ?>
     </div>
 </div>
 
 <div class="row-fluid">
     <div class="span6">
 
-        <?php echo $form->labelEx($model, 'area'); ?>
-        <?php echo $form->textField($model, 'area', array('size' => 6, 'maxlength' => 6)); ?>
-        <?php echo $form->error($model, 'area'); ?>
+        <?php echo $form->labelEx($model, 'city'); ?>
+        <?php echo $form->dropdownList($model, 'city', City::getList($model->country), array('empty' => '-- Empty --')); ?>
+        <?php echo $form->error($model, 'city'); ?>
     </div>
     <div class="span3">
 
@@ -83,6 +88,9 @@
         <?php echo $form->error($model, 'fsrent'); ?>
     </div>
     <div class="span3">
+        <?php echo $form->labelEx($model, 'hsrent'); ?>
+        <?php echo $form->checkBox($model, 'hsrent'); ?>
+        <?php echo $form->error($model, 'hsrent'); ?>
 
     </div>
 </div>
@@ -90,27 +98,116 @@
 <div class="row-fluid">
     <div class="span6">
 
-        <?php echo $form->labelEx($model, 'country'); ?>
-        <?php echo $form->textField($model, 'country', array('size' => 6, 'maxlength' => 6)); ?>
-        <?php echo $form->error($model, 'country'); ?>
+        <?php echo $form->labelEx($model, 'area'); ?>
+        <?php echo $form->dropdownList($model, 'area', Area::getList($model->city), array('empty' => '-- Empty --')); ?>
+        <?php echo $form->error($model, 'area'); ?>
+
     </div>
-    <div class="span6">
+    <div class="span3">
+        <?php echo $form->labelEx($model, 'sold'); ?>
+        <?php echo $form->checkBox($model, 'sold'); ?>
+        <?php echo $form->error($model, 'sold'); ?>
+
+    </div>
+    <div class="span3">
+        <?php echo $form->labelEx($model, 'rent'); ?>
+        <?php echo $form->checkBox($model, 'rent'); ?>
+        <?php echo $form->error($model, 'rent'); ?>
 
     </div>
 </div>
 <div class="row-fluid">
-    <div class="span6">
+    <div class="span3">
+        <?php echo $form->labelEx($model, 'price1'); ?>
+        <?php echo $form->textField($model, 'price1', array('class' => 'simple_input spinner_currency_e pr')); ?>
+        <?php echo $form->error($model, 'price1'); ?>
+    </div>
+    <div class="span3">
+        <?php echo $form->labelEx($model, 'price2'); ?>
+        <?php echo $form->textField($model, 'price2', array('class' => 'simple_input spinner_currency_e pr')); ?>
+        <?php echo $form->error($model, 'price2'); ?>
+    </div>
+    <div class="span3">
+        <?php echo $form->labelEx($model, 'exclusive'); ?>
+        <?php echo $form->checkBox($model, 'exclusive'); ?>
+        <?php echo $form->error($model, 'exclusive'); ?>
 
     </div>
-    <div class="span6">
+    <div class="span3">
+        <?php echo $form->labelEx($model, 'titledeed'); ?>
+        <?php echo $form->checkBox($model, 'titledeed'); ?>
+        <?php echo $form->error($model, 'titledeed'); ?>
 
     </div>
 </div>
 <div class="row-fluid">
-    <div class="span6">
+    <div class="span3">
+        <?php echo $form->labelEx($model, 'price3'); ?>
+        <?php echo $form->textField($model, 'price3', array('class' => 'simple_input spinner_currency_e pr')); ?>
+        <?php echo $form->error($model, 'price3'); ?>
 
     </div>
-    <div class="span6">
+    <div class="span3">
+        <?php echo $form->labelEx($model, 'comision'); ?>
+        <?php echo $form->textField($model, 'comision', array('class' => 'spinner_simple_p pr')); ?>
+        <?php echo $form->error($model, 'comision'); ?>
+
+    </div>
+    <div class="span3">
+
+    </div>
+    <div class="span3">
+
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span3">
+        <?php echo $form->labelEx($model, 'price5'); ?>
+        <?php echo $form->textField($model, 'price5', array('class' => 'simple_input spinner_currency_e pr')); ?>
+        <?php echo $form->error($model, 'price5'); ?>
+
+    </div>
+    <div class="span3">
+        <?php echo $form->labelEx($model, 'chcomision'); ?>
+        <?php echo $form->textField($model, 'chcomision', array('class' => 'spinner_simple_p pr')); ?>
+        <?php echo $form->error($model, 'chcomision'); ?>
+
+    </div>
+    <div class="span3">
+        <?php echo $form->labelEx($model, 'vat'); ?>
+        <?php echo $form->checkBox($model, 'vat'); ?>
+        <?php echo $form->error($model, 'vat'); ?>
+
+    </div>
+    <div class="span3">
+
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span3">
+
+    </div>
+    <div class="span3">
+
+    </div>
+    <div class="span3">
+
+    </div>
+    <div class="span3">
+
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span3">
+
+    </div>
+    <div class="span3">
+
+    </div>
+    <div class="span3">
+
+    </div>
+    <div class="span3">
 
     </div>
 </div>

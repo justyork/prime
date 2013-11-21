@@ -27,11 +27,23 @@ class AjaxController extends CController
 		);
 	}
 
-    public function actionPropertyInfo(){
+    public function actionCityList(){
         $id = $_POST['id'];
-        
-        $item = Property::model()->findByPk($id);
-         
-        $this->renderPartial('//common/property_info', array('item' => $item));
+        echo $this->_generateSelect(City::getList($id));
     }
+    public function actionAreaList(){
+        $id = $_POST['id'];
+        echo $this->_generateSelect(City::getList($id));
+    }
+
+
+
+    private function _generateSelect($list){
+        $ret = '<option>-- Empty --</option>';
+        foreach($list as $key => $value){
+            $ret .= '<option value="'.$key.'">'.$value.'</option>';
+        }
+        return $ret;
+    }
+
 }

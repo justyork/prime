@@ -112,4 +112,10 @@ class City extends CActiveRecord
         }
         return $name;
     }
+
+    public static function getList($id){
+        $model = self::model()->findAll('country = ' . $id);
+
+        return CHtml::listData($model, 'id', self::name());
+    }
 }

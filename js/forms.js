@@ -208,7 +208,7 @@ $(".spinner_simple").spinner();
 
 $(".spinner_decimal").spinner({
 	decimals: 2,
-	stepping: 0.15
+	stepping: 0.05
 });
 
 $(".spinner_currency").spinner({
@@ -217,10 +217,17 @@ $(".spinner_currency").spinner({
 	min: 2
 });
 
+$(".spinner_simple_p").spinner({
+	currency: '%',
+	max: 100,
+    decimals: 1,
+	min: 0
+});
+
 $(".spinner_currency_e").spinner({
 	currency: '€',
-	max: 20,
-	min: 2
+	max: 9999999,
+	min: 0
 });
 
 $(".spinner_disabled").spinner().spinner("disable");
